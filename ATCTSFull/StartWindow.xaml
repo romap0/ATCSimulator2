@@ -1,0 +1,115 @@
+﻿<metro:Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	x:Name="Window"
+	Background="{DynamicResource BackgroundBrush}"
+	x:Class="ATCTSFull.StartWindow"
+	Title="Preferences"
+	ResizeMode="{DynamicResource NormalResizeMode}"
+	WindowStartupLocation="CenterScreen"
+	Width="{DynamicResource ChildWindowWidth}"
+	Height="{DynamicResource ChildWindowHeight}"
+	params:Manager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Manager.ContrastBrush="White"
+	params:Manager.Theme="{DynamicResource NormalTheme}"
+	params:Design.Theme="{DynamicResource NormalTheme}"
+	Initialized="Window_Initialized" Closed="Window_Closed"
+	ShowInTaskbar="False">
+	<Grid>
+		<Label
+			Content="Traffic preferences"
+			HorizontalAlignment="Left"
+			Margin="10,10,0,0"
+			VerticalAlignment="Top"
+			FontSize="{DynamicResource HeaderFontSize}" />
+		<Label
+			x:Name="lblMaximumTraffic"
+			Content="5"
+			HorizontalAlignment="Left"
+			Margin="155,163,0,0"
+			VerticalAlignment="Top"
+			Visibility="Visible"
+			FontSize="18" />
+		<Slider
+			x:Name="sldTrafficSlider"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="70,140,0,0"
+			Width="202"
+			Foreground="Black"
+			ValueChanged="sldTrafficSliderValueChanged"
+			LargeChange="2"
+			SmallChange="1"
+			Value="5"
+			Minimum="3"
+			Maximum="30"
+			Visibility="Visible" />
+		<Button
+			x:Name="btnBackWindow"
+			Content="Back"
+			HorizontalAlignment="Left"
+			Margin="10,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnBackWindowClick"
+			IsCancel="True" />
+		<Button
+			x:Name="btnStart"
+			Content="Start"
+			HorizontalAlignment="Right"
+			Margin="0,0,10,10"
+			VerticalAlignment="Bottom"
+			Click="btnStartClick"
+			IsDefault="True"
+			IsEnabled="False" />
+		<RadioButton
+			Content="Stable traffic flow"
+			HorizontalAlignment="Left"
+			Margin="70,100,0,0"
+			VerticalAlignment="Top"
+			Checked="ckbStableTrafficFlowChecked" />
+		<RadioButton
+			Content="Increasing traffic flow"
+			HorizontalAlignment="Left"
+			Margin="70,77,0,0"
+			VerticalAlignment="Top"
+			Checked="ckbStableTrafficFlow_Unchecked"
+			IsChecked="True" />
+		<Label
+			Content="Sector preferences"
+			HorizontalAlignment="Left"
+			Margin="345,10,0,0"
+			VerticalAlignment="Top"
+			FontSize="{DynamicResource HeaderFontSize}" />
+		<ComboBox
+			x:Name="cmbSectors"
+			HorizontalAlignment="Left"
+			Margin="405,100,0,0"
+			VerticalAlignment="Top"
+			Width="120"
+			Text="Choose sector" SelectionChanged="cmbSectors_SelectionChanged"/>
+		<Label
+			Content="Your sectors:"
+			HorizontalAlignment="Left"
+			Margin="405,69,0,0"
+			VerticalAlignment="Top"
+			FontSize="14" />
+		<Button
+			x:Name="btnBuyMore"
+			HorizontalAlignment="Left"
+			Margin="530,100,0,0"
+			VerticalAlignment="Top"
+			Width="75"
+			Content="Buy more"
+			Click="btnBuyMore_Click" />
+        <metro:ProgressBar x:Name="pgDownloadSectorFile" HorizontalAlignment="Left"
+			Height="5"
+			Margin="405,136,0,0"
+			VerticalAlignment="Top"
+			Width="200"
+			State="Busy"
+			Visibility="Hidden" />
+
+	</Grid>
+</metro:Window>

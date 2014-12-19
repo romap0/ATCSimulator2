@@ -1,0 +1,41 @@
+﻿<metro:Window
+	x:Class="ATCTSFull.HighscoreWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	params:Manager.Theme="{DynamicResource NormalTheme}"
+	params:Manager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Manager.ContrastBrush="White"
+	Background="{DynamicResource BackgroundBrush}"
+	Title="Highscore"
+	Loaded="WindowLoad"
+	ShowInTaskbar="False"
+	ResizeMode="{DynamicResource NormalResizeMode}"
+	WindowStartupLocation="CenterScreen"
+	Width="{DynamicResource ChildWindowWidth}"
+	Height="{DynamicResource ChildWindowHeight}">
+	<Grid>
+		<Label
+			x:Name="lblHighscoreValue"
+			Content="100000$"
+			HorizontalAlignment="Center"
+			Margin="0"
+			VerticalAlignment="Center"
+			FontSize="74.667" />
+		<Button
+			x:Name="btnBackWindow"
+			Content="Back"
+			HorizontalAlignment="Left"
+			Margin="12,0,0,12"
+			VerticalAlignment="Bottom"
+			Click="btnbtnBackWindowClick" />
+		<Label
+			Content="Your highscore:"
+			HorizontalAlignment="Center"
+			Margin="0,25,0,0"
+			VerticalAlignment="Top"
+			FontSize="34.667"
+			Width="254" />
+	</Grid>
+</metro:Window>

@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" x:Class="ATCTrainingSimulatorSectorGenerator.ImportVORWindow"
+        Title="Import VOR">
+    <Grid>
+        <WindowsFormsHost Margin="0,0,0,30">
+            <Forms:DataGridView x:Name="dgvVORs" AutoSizeColumnsMode="Fill" AllowUserToAddRows="False" AllowUserToDeleteRows="False" ReadOnly="True" SelectionChanged="dgvVORsSelectionChanged" MultiSelect="False" AllowUserToOrderColumns="False">
+                <Forms:DataGridView.Columns>
+                    <Forms:DataGridViewTextBoxColumn HeaderText="Name"/>
+                </Forms:DataGridView.Columns>
+            </Forms:DataGridView>
+        </WindowsFormsHost>
+        <Button x:Name="btnImport" Content="Import" HorizontalAlignment="Right" Margin="0,0,10,3" VerticalAlignment="Bottom" Width="75" Click="btnImportClick"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="10,0,0,3" VerticalAlignment="Bottom" Width="75" Click="btnCancelClick"/>
+
+    </Grid>
+
+</Window>

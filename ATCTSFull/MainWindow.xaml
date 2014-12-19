@@ -1,0 +1,98 @@
+﻿<metro:Window
+	x:Name="Window"
+	x:Class="ATCTSFull.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	params:Manager.Theme="Light"
+	params:Manager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Manager.ContrastBrush="White"
+	Background="{DynamicResource BackgroundBrush}"
+	Title="ATC Training Simulator Full (prototype)"
+	Height="600"
+	Width="1024"
+	WindowStartupLocation="CenterScreen"
+	ShowInTaskbar="True"
+	ResizeMode="NoResize"
+	Icon="{DynamicResource NormalIcon}"
+	Loaded="Window_Loaded">
+	<Grid>
+		<Grid.Background>
+			<ImageBrush
+				ImageSource="Images/MainWindowBackgroundImage.png" />
+		</Grid.Background>
+		<Button
+			x:Name="btnHighscoreWindow"
+			Content="Highscore"
+			HorizontalAlignment="Left"
+			Margin="85,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnHighscoreWindowClick" />
+		<Button
+			x:Name="btnAboutWindow"
+			Content="About"
+			HorizontalAlignment="Left"
+			Margin="165,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnAboutWindowClick" />
+		<Button
+			x:Name="btnExit"
+			Content="Exit"
+			HorizontalAlignment="Left"
+			Margin="315,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnExitClick" />
+		<Button
+			x:Name="btnStartWindow"
+			Content="Start"
+			HorizontalAlignment="Left"
+			Margin="10,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnStartWindowClick" />
+		<Button
+			x:Name="btnShop"
+			Content="Shop"
+			HorizontalAlignment="Left"
+			Margin="240,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnShop_Click" />
+		<Button
+			x:Name="btnLogOut"
+			Content="Log out &amp; exit"
+			HorizontalAlignment="Left"
+			Margin="390,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnLogOut_Click" />
+		<Grid
+			x:Name="grdUserInfo"
+			HorizontalAlignment="Right"
+			Height="94"
+			Margin="0,30,30,0"
+			VerticalAlignment="Top"
+			Width="300">
+			<Label
+				x:Name="lblName"
+				Content="First and Last Names"
+				HorizontalAlignment="Right"
+				Margin="0,19,100,0"
+				VerticalAlignment="Top"
+				Width="200"
+				HorizontalContentAlignment="Right" />
+			<Label
+				x:Name="lblEmail"
+				Content="email@email.email"
+				HorizontalAlignment="Right"
+				Margin="0,45,100,0"
+				VerticalAlignment="Top"
+				Width="200"
+				HorizontalContentAlignment="Right" />
+			<Image
+				HorizontalAlignment="Right"
+				Height="74"
+				Margin="0,10,10,0"
+				VerticalAlignment="Top"
+				Width="74" />
+		</Grid>
+	</Grid>
+</metro:Window>

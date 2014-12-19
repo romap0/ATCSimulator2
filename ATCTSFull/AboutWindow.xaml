@@ -1,0 +1,101 @@
+﻿<metro:Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	params:Manager.Theme="{DynamicResource NormalTheme}"
+	params:Manager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Manager.ContrastBrush="White"
+	Background="{DynamicResource BackgroundBrush}"
+	x:Class="ATCTSFull.AboutWindow"
+	Title="About"
+	Height="{DynamicResource ChildWindowHeight}"
+	Width="{DynamicResource ChildWindowWidth}"
+	WindowStartupLocation="CenterScreen"
+	params:Design.Theme="{DynamicResource NormalTheme}"
+	ResizeMode="{DynamicResource NormalResizeMode}"
+	Icon="{DynamicResource NormalIcon}">
+	<Grid
+		x:Name="grid1"
+		HorizontalAlignment="Stretch">
+		<Label
+			Content="Air Traffic Control Training Simulator Full v.0.1"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="12,12,0,0"
+			x:Name="label1"
+			VerticalAlignment="Top"
+			Width="Auto"
+			Target="{Binding}" />
+		<Label
+			Content="© NWD-Group"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="60,45,0,0"
+			x:Name="label2"
+			VerticalAlignment="Top" />
+		<Label
+			Content="Site:"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="350,100,0,0"
+			x:Name="label3"
+			VerticalAlignment="Top" />
+		<Label
+			Content="E-mail:"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="350,120,0,0"
+			x:Name="label4"
+			VerticalAlignment="Top" />
+		<Label
+			Content="Author:"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="350,140,0,0"
+			x:Name="label5"
+			VerticalAlignment="Top" />
+		<Label
+			Content="http://atc.nwd-group.com"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="436,100,0,0"
+			x:Name="label6"
+			VerticalAlignment="Top" />
+		<Label
+			Content="programer@nwd-group.com"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="436,120,0,0"
+			x:Name="label7"
+			VerticalAlignment="Top" />
+		<Label
+			Content="Roman Pavlov"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="436,140,0,0"
+			x:Name="label8"
+			VerticalAlignment="Top" />
+		<Label
+			Content="Design:"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="350,160,0,0"
+			x:Name="label9"
+			VerticalAlignment="Top" />
+		<Label
+			Content="Artem Kharkov"
+			Height="Auto"
+			HorizontalAlignment="Left"
+			Margin="436,160,0,0"
+			x:Name="label12"
+			VerticalAlignment="Top" />
+		<Button
+			x:Name="btnBackWindow"
+			Content="Back"
+			HorizontalAlignment="Left"
+			Margin="10,0,0,10"
+			VerticalAlignment="Bottom"
+			Click="btnBackWindowClick" />
+	</Grid>
+</metro:Window>

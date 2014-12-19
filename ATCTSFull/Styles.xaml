@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	xmlns:InstanceBuilders="clr-namespace:Microsoft.Expression.WpfPlatform.InstanceBuilders;assembly=Microsoft.Expression.WpfPlatform"
+	xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<metro:Theme
+		x:Key="NormalTheme">Light</metro:Theme>
+	<BitmapImage
+		x:Key="NormalIcon">Images/icon_1.ico</BitmapImage>
+	<ResizeMode
+		x:Key="NormalResizeMode">NoResize</ResizeMode>
+
+
+	<System:Double
+		x:Key="ChildWindowWidth">750</System:Double>
+	<System:Double
+		x:Key="ChildWindowHeight">300</System:Double>
+	<System:Double
+		x:Key="HeaderFontSize">16</System:Double>
+
+
+</ResourceDictionary>

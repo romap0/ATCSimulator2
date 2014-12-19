@@ -1,0 +1,96 @@
+﻿<metro:Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	x:Name="Window"
+	params:Manager.Theme="Light"
+	params:Manager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Manager.ContrastBrush="White"
+	params:Design.Theme="Light"
+	params:Design.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Design.ContrastBrush="White"
+	Background="{DynamicResource BackgroundBrush}"
+	Title="ATC Training Simulator beta"
+	Height="600"
+	Width="1024"
+	x:Class="ATCTSFull.RadarWindow"
+	WindowStartupLocation="CenterScreen"
+	ResizeMode="{DynamicResource NormalResizeMode}"
+	ShowInTaskbar="True"
+	Closed="Window_Closed"
+	WindowState="Maximized"
+	Loaded="Window_Loaded"
+	MouseWheel="Window_MouseWheel"
+	MouseMove="Window_Move"
+	MouseUp="Window_MouseUp"
+	MouseDown="Window_MouseDown">
+	<Grid>
+		<Canvas
+			x:Name="cnvRadar"
+			Margin="0,100,0,0" />
+		<Grid
+			Height="100"
+			VerticalAlignment="Top">
+			<Label
+				x:Name="lblCallsign"
+				Content="XXX0000"
+				HorizontalAlignment="Left"
+				Margin="10,10,0,0"
+				VerticalAlignment="Top"
+				FontSize="36" />
+			<Label
+				Content="Altitude:"
+				HorizontalAlignment="Left"
+				Margin="184,10,0,0"
+				VerticalAlignment="Top" />
+			<ComboBox
+				x:Name="cmbAltitude"
+				HorizontalAlignment="Left"
+				Margin="184,55,0,0"
+				VerticalAlignment="Top"
+				Width="120" />
+			<Label
+				Content="Speed:"
+				HorizontalAlignment="Left"
+				Margin="340,10,0,0"
+				VerticalAlignment="Top" />
+			<ComboBox
+				x:Name="cmbSpeed"
+				HorizontalAlignment="Left"
+				Margin="340,55,0,0"
+				VerticalAlignment="Top"
+				Width="120" />
+			<Label
+				x:Name="lblChart"
+				Content="Chart:"
+				HorizontalAlignment="Left"
+				Margin="498,10,0,0"
+				VerticalAlignment="Top" />
+			<ComboBox
+				x:Name="cmbChart"
+				HorizontalAlignment="Left"
+				Margin="498,55,0,0"
+				VerticalAlignment="Top"
+				Width="120" />
+			<Label
+				x:Name="lblRunway"
+				Content="Runway:"
+				HorizontalAlignment="Left"
+				Margin="662,10,0,0"
+				VerticalAlignment="Top" />
+			<ComboBox
+				x:Name="cmbRunway"
+				HorizontalAlignment="Left"
+				Margin="662,55,0,0"
+				VerticalAlignment="Top"
+				Width="120" />
+			<Label
+				x:Name="lblFps"
+				Content="0"
+				HorizontalAlignment="Left"
+				Margin="831,35,0,0"
+				VerticalAlignment="Top" />
+		</Grid>
+	</Grid>
+</metro:Window>
